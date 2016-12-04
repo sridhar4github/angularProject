@@ -1,0 +1,47 @@
+body {
+  padding-top: 70px;
+  margin: 0;
+}
+
+.starter-template{
+  text-align: center;
+  padding: 40px 15px 10px 15px;
+}
+
+.starter-template h1{
+    font-size: 63px;
+    text-align: center;
+ }
+
+ .lead{
+ 	margin-bottom: 15px;
+ }
+
+p.btn{
+	text-align: left;	
+}
+
+.row{
+	margin: 10px 80px 10px 80px;
+	text-align: left;	
+}
+
+.col-md-4{
+	float: left;
+	position: relative;
+}
+
+.form-inline{ 
+ padding: 20px;
+}
+
+.form-control{
+  padding: 20px; 
+  margin-bottom: 5px;
+}
+
+.form-signin, .form-signup{
+  padding: 20px; 
+  width: 330px;
+  margin: 0 auto;
+}

@@ -1,0 +1,12 @@
+<div class="container" >
+<form ng-controller="signUpController" name="regForm" ng-submit="signUp()" class="form-signup ng-scope ng-pristine ng-invalid ng-invalid-required" role="form">
+    <h2 class="form-signin-heading">Sign up</h2>
+    <p ng-show="error" class="text-danger ng-binding ng-hide"></p>
+    <input ng-model="user.email" type="email" class="form-control ng-pristine ng-invalid ng-invalid-required ng-valid-email" placeholder="Email address" required="" autofocus="">
+    <input ng-model="user.password" type="password" class="form-control ng-pristine ng-invalid ng-invalid-required" placeholder="Password" required="">
+    <input ng-model="restaurantName" type="text" class="form-control restaurant-name ng-pristine ng-invalid ng-invalid-required" placeholder="Restaurant Name" required="">
+    <input ng-disabled="!user.email || !user.password" type="submit" value="Sign up" class="btn btn-lg btn-primary btn-block">
+
+    <!-- <button type="button" ng-click="signUp();" ng-disabled="!user.email || !user.password" class="btn btn-lg btn-primary btn-block">Register</button> -->
+</form>
+</div>
