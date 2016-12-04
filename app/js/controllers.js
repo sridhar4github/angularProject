@@ -27,8 +27,23 @@ angular.module('myApp.controllers', [])
 
   }])
 
-.controller('loginController', [function() {
-
+.controller('loginController', ['$scope', '$location', '$firebaseAuth', function($scope, $location, $firebaseAuth) {
+      var firebaseObj = new Firebase("https://radiant-fire-6981.firebaseio.com/");
+    var loginObj = $firebaseAuth(firebaseObj);
+    $scope.signIn = function(){
+      // e.preventDefault();
+      var username = $scope.registerFormInfo.email;
+      var password = $scope.registerFormInfo.password;
+      loginObj.$authWithPassword({email:username,password:password})
+      .then (function() {
+        console.log('Authenticated successfully!:');
+        $location.path('/addParty');
+      }, function(error)
+          {
+            console.log('Login Failed!');
+          }
+        );
+    }
   }])
 
 .controller('signUpController', ['$scope', '$location', '$firebaseAuth', function($scope, $location, $firebaseAuth) {
