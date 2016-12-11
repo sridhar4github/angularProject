@@ -41,6 +41,7 @@ angular.module('myApp.controllers', [])
       }, function(error)
           {
             console.log('Login Failed!');
+            alert('Please enter correct Username/Password');
           }
         );
     }
@@ -63,7 +64,8 @@ angular.module('myApp.controllers', [])
                     }, function(error) {
                         // do things if failure
                         console.log(error);
-                        alert("Email address already exists");
+                        alert("Email address already exists. Please login!");
+                        $location.path('/login')
                     });
             }
         }
