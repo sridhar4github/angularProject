@@ -70,6 +70,6 @@ angular.module('myApp.controllers', [])
             }
         }
     };
+//test
 
-
-}]);
+}]); 
